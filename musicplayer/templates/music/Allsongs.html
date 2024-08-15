@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundSphere</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Allsongs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="appname">
+            SoundSphere
+        </div>
+        <div class="home">
+            <a href="/SoundSphere/home/">Home</a>
+        </div>
+        <div class="allsongs">
+            <a href="/SoundSphere/Allsongs/">All Songs</a>
+        </div>
+        <div class="logout">
+            <a href="/SoundSphere/logout/">Logout</a>
+        </div>
+        <div class="user-name">
+            {% if user.is_authenticated %}
+            Hi  {{ user.username }} 
+            {% endif %}
+        </div>
+    </div>
+    <div class="container-div">
+        <div class="each-song-div"></div>
+        {% for item in Song %}
+        <div class="each-song-div">
+        <div class="song-div">
+            <div class="image-box">
+                <img src="{{item.image.url}}">
+            </div>
+            <h2>{{item.song_name}}</h2>
+            <p>{{item.singer}}</p>
+            <p>{{item.song_type}}</p>
+        </div>
+        <div class="listen">
+            <a href="/SoundSphere/home/{{item.song_id}}"><button class="btn">listen Song</button></a>
+        </div>
+        </div>
+        <hr>
+        {% endfor %}
+    
+       
+    </div>
+</body>
+</html>

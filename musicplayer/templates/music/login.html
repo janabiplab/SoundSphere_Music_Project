@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="main-div">   
+          <div>
+          <p>
+            Welcome to <span class="span_song">SoundSphere</span>
+          </p>
+          </div>
+          <div class="form-box">
+            <form method="POST">
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                      <p class="ptag">{{message}}<p>
+                
+                    {% endfor %}
+                {% endif %}
+                <h3>Login Here</h3>
+               
+                <div class="each-form-section">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" class="form-input"  name="username" required>
+                </div>
+            
+                <div class="each-form-section">
+                    <label for="exampleInputEmail1">Password</label>
+                    <input type="text" class="form-input"  name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">LOGIN</button>
+        
+            </form>
+          </div>
+          
+        </div>  
+        <p>Don`t have an account<a href="/SoundSphere/signup/">SignUp</a></p>
+    </div>
+    
+    
+</body>
+</html>

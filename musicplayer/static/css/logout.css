@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-cont{
+    width: 300px;
+    height: 400px;
+}
+p{
+    font-size: 35px;
+    color: rgb(235, 23, 147);
+    font-weight: bold;
+    text-shadow: 2px 2px 2px white;
+
+}
+.logout-cont>form{
+    padding: 2rem;
+}
+.logout-cont>form>button{
+    padding:6px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+   background-color: rgb(57, 224, 15);
+}

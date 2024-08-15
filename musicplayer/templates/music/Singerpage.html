@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SoundSphere</title>
+   {% load static %}
+   <link rel="stylesheet"  href="{% static 'css/navbar.css'%}">
+   <link rel="stylesheet" href="{% static 'css/singerpage.css' %}">
+<body>
+   <div class="navbar">
+      <div class="appname">
+          SoundSphere
+      </div>
+      <div class="home">
+          <a href="/SoundSphere/home/">Home</a>
+      </div>
+      <div class="allsongs">
+          <a href="/SoundSphere/Allsongs/">All Songs</a>
+      </div>
+      <div class="logout">
+          <a href="/SoundSphere/logout/">Logout</a>
+      </div>
+      <div class="user-name">
+          {% if user.is_authenticated %}
+          Hi  {{ user.username }} 
+          {% endif %}
+      </div>
+  </div>
+  <div class="singer-details">
+   <div class="singer-song-detail">
+   {% for item in Song %}
+   <div class="detail">
+      <div class="image">
+         <img src="{{item.image.url}}">
+      </div>
+      <div class="About-song">
+        <p>{{item.song_name}}</p>
+        <p>{{item.singer}}</p>
+        <p>{{item.song_type}} song</p>
+        <p><a href="/SoundSphere/home/{{item.song_id}}">Listen Song</a></p>
+      </div>
+   </div>
+   {% endfor %}
+   </div>
+   <div class="singers">
+     <div>
+         <p class="artist"> Artist</p>
+     </div>
+     <div class="singer-name">
+        {% for singer in Singers %}
+        <div class="Name">
+        <ul>
+         <li>
+             <a href="/SoundSphere/Singer/{{singer}}">{{singer}}</a>
+         </li>
+        </ul>
+        </div>
+        {% endfor %}
+     </div>
+   </div>
+  </div>
+</body>
+</html>

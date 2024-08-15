@@ -1,0 +1,73 @@
+.navbar{
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(12,ifr);
+    grid-template-rows: 120px;
+    grid-template-areas: 
+        "app app app app  app  app app app home all log   user";
+    background-image: linear-gradient(to bottom,rgb(238, 10, 10),rgb(16, 17, 16));    
+}
+.appname{
+
+    grid-area: app;
+    text-align: center;
+    font-size: 50px;
+    padding: 1rem;
+    font-weight:bolder;
+    color: rgb(157, 14, 185);
+    text-shadow: 3px 3px 3px black;
+    
+}
+.home{
+   
+    grid-area: home;
+    padding: 2rem;
+}
+.home>a{
+   font-size: 30px;
+   color: white;
+   text-shadow: 3px 3px 3px black;
+   text-decoration: none;
+}
+.home>a:hover{
+  color: blueviolet;
+}
+.allsongs{
+  
+    grid-area: all;
+    padding: 2rem;
+}
+.allsongs>a{
+    font-size: 30px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    text-decoration: none;
+    
+}
+.allsongs>a:hover{
+    color: blueviolet;
+}
+.logout{
+   
+    grid-area: log;
+    padding: 2rem;
+}
+.logout>a{
+    font-size: 30px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    text-decoration: none;
+    
+    
+}
+.logout>a:hover{
+    color: blueviolet;
+}
+.user-name{
+   
+    grid-area: user;
+    padding: 1.8rem;
+    font-size: 35px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+      <div>
+      <p>
+        Welcome to <span class="span_song">SoundSphere</span>
+      </p>
+      </div>
+      <div class="form-box">
+        <form method="POST">
+            {% csrf_token %}
+            <h3>Register</h3>
+            {% if messages %}
+                {% for message in messages %}
+                <p class="ptag">{{message}}<p>
+                
+                {% endfor %}
+            {% endif %}
+            <div class="each-form-section">
+                <label for="exampleInputEmail1">First name</label>
+                <input type="text" class="form-input"  
+                    placeholder="Enter First Name" name="first_name" required>
+            </div>
+            <div class="each-form-section">
+                <label for="exampleInputEmail1">Last name</label>
+                <input type="text" class="form-input" 
+                    placeholder="Enter Last Name" name="last_name" required>
+            </div>
+            <div class="each-form-section">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-input" 
+                    placeholder="Enter Username" name="username" required>
+            </div>
+        
+            <div class="each-form-section">
+                <label for="exampleInputEmail1">Password</label>
+                <input type="text" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter Password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">SignUp</button>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

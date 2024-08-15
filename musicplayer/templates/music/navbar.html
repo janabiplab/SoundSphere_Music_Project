@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundSphere</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="appname">
+            SoundSphere
+        </div>
+        <div class="home">
+            <a href="/SoundSphere/home/">Home</a>
+        </div>
+        <div class="allsongs">
+            <a href="/SoundSphere/Allsongs/">All Songs</a>
+        </div>
+        <div class="logout">
+            <a>LogOut</a>
+        </div>
+        <div class="user-name">
+            {% if user.is_authenticated %}
+            Hi  {{ user.username }} 
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

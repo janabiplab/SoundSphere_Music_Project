@@ -1,0 +1,209 @@
+/* Navbar */
+
+
+/* Image Box */
+
+.font-image{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:600px;
+    grid-template-areas: 
+        "i i i i i i i i i s s s";
+}
+.image1-box{
+    grid-area: i;
+}
+.image{
+    width: 100%;
+    height:100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.singer-box{
+    grid-area: s;
+    overflow-y: auto;
+    background-image: linear-gradient(to left ,rgb(184, 183, 159),rgb(164, 165, 175),rgb(93, 106, 218));
+
+}
+.singer-box>div{
+    padding: 1rem;
+}
+.artist{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(216, 214, 236);
+    text-shadow: 5px 5px 5px black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Name>ul>li>a{
+    font-size: 35px;
+    font-weight: bold;
+    color: #1f1d1b;
+    text-shadow: 3px 3px 3px  rgb(240, 233, 233);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+.Name>ul>li>a:hover{
+    color: #e225c3;
+}
+
+ 
+.name{
+   padding: 1rem;
+}
+.name>p{
+    font-size: 25px;
+    font-weight: bold;
+    color: #ccdfcc;
+    text-shadow: 5px 5px 5px  black;
+}
+
+
+/* Best song css */
+.Older_playlist{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: auto;
+   padding: 1rem;
+}
+.Older_playlist>marquee{
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px wheat;
+    color: rgb(245, 17, 17);
+}
+.button-29{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    font-size: 30px;
+    border-radius: 20px;
+} 
+
+.song_div{
+    margin-top: 20px;
+    margin-left: 60px;
+    width:auto; 
+    height:600px; 
+    background-color: #ccdfcc;
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+    
+
+.image_box{
+    width:350px;
+    height:200px;
+    background-color: rgb(185, 241, 204);
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+   
+}   
+.image_box img{
+    width: 100%;
+     height:100%;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     background-size: cover;
+} 
+
+.song_div>p:nth-of-type(1){
+    font-size: 30px;
+    margin-left: 20px;
+    color: #3e22dd;
+}
+.song_div>p:nth-of-type(2){
+    font-size: 30px;
+    margin-left: 20px;
+    color: #e71d50;
+}
+
+
+
+
+.song-container>p{
+    text-align: center;
+    font-size: 50px;
+    color: #ff1d58;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+    
+}
+.best-song-container{
+    display: flex;
+    overflow: auto;
+    padding: 20px;
+}
+
+/* CSS  for button */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* css for button box */
+.btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100px;
+   height: 100px;
+   box-sizing: border-box;
+}
+.song_div>h2{
+   margin-left: 20px;
+   text-align: center;
+   overflow: hidden;
+   text-overflow: clip;
+   text-shadow: #3e22dd;
+   color: #e225c3;
+}

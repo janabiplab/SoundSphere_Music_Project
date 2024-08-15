@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundSphere</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Songpage.css'%}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="appname">
+            SoundSphere
+        </div>
+        <div class="home">
+            <a href="/SoundSphere/home/">Home</a>
+        </div>
+        <div class="allsongs">
+            <a href="/SoundSphere/Allsongs/">All Songs</a>
+        </div>
+        <div class="logout">
+            <a href="/SoundSphere/logout/">Logout</a>
+        </div>
+        <div class="user-name">
+            {% if user.is_authenticated %}
+            Hi  {{ user.username }} 
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="song-div">
+            <div class="image-box">
+                <img src="{{Song.image.url}}">
+            </div>
+            <div class="details-song">
+                <p class="detail">{{Song.song_name}}</p>
+                <p class="detail">{{Song.singer}}</p>
+                <p class="detail">{{Song.song_type}} song</p>
+                <div class="download">
+                   <audio controls><source src="{{Song.song.url}}"></audio> 
+                </div>
+                
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>
